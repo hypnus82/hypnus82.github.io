@@ -43,7 +43,7 @@
 <script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
 <!-- script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script -->
 <script>
-    var contractAddress = '0x04bF85D2822fdFf3ED2dc5d27C3241D961773223';
+    var contractAddress = '0xfBA2130e0aae54a3b5e4d3d4b93616C7ae4B04B8';
     var abi = [{"constant":false,"inputs":[{"name":"x","type":"uint256"}],"name":"set","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"get","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"}];
     var simpleStorageContract;
     var simpleStorage;
@@ -88,7 +88,7 @@
 
     function setValue() {
         var newValue = document.getElementById('newValue').value;
-        var txid = "";
+        var txid;
 
         simpleStorage.set(newValue, function(e,r){
             document.getElementById('result').innerHTML = 'Transaction id: ' + r + '<span id="pending" style="color:red;">(Pending)</span>';
